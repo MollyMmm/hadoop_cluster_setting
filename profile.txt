@@ -1,0 +1,27 @@
+# User Setting
+export JAVA_HOME=/usr/java/default
+export HADOOP_HOME=/alidata/opt/hadoop-2.7.5
+export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$PATH
+
+export SCALA_HOME=/usr/share/scala
+export PATH=$SCALA_HOME/bin:$PATH
+
+export SPARK_HOME=/alidata/opt/spark-2.0.0
+export PATH=$SPARK_HOME/bin:$PATH
+
+export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native/:$LD_LIBRARY_PATH
+
+export SQOOP_HOME=/alidata/opt/sqoop-1.4.7
+export PATH=$PATH:$SQOOP_HOME/bin
+
+export HIVE_HOME=/alidata/opt/hive-2.1.1
+export PATH=$PATH:$HIVE_HOME/bin
+
+export HBASE_HOME=/alidata/opt/hbase-1.2.6
+export PATH=$PATH:$HBASE_HOME/bin
+
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HIVE_CONF_DIR=$HIVE_HOME/conf
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*:$HBASE_HOME/lib/*:$HIVE_HOME/conf/
+export SPARK_CLASSPATH=$SPARK_HOME/jars/*:$HIVE_HOME/lib/hive-exec-2.1.1.jar:$HIVE_HOME/lib/hive-common-2.1.1.jar:$HBASE_HOME/lib/*:$HIVE_HOME/lib/mysql-connector-java-5.1.46.jar
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
